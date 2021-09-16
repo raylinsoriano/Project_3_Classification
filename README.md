@@ -61,7 +61,7 @@ For a house with an average grade and at an average price ($540,168) if you incr
 
 ### Change in number of bathroom and its relationship to change in home price
 
-![Header Image](https://github.com/ericdnbn/Phase_2_Project/blob/main/Images/Image%204-bathroom.png)
+![Header Image](x)
 For a house at the average price, one additional bathroom will increase the home sale price by  ~$25,000. 
 
 
