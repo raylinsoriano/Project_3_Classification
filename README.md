@@ -9,22 +9,19 @@ Lorela Blaka, Allison Gao, Raylin Soriano
 
 
 ## General Overview and Business Understanding
-This analysis used historical data on houses sold in 2014 and 2015 in King County, Washington to predict housing price in the same county with respect to a myriad of factors such as square footage of the house and location. The purpose of the analysis is to provide actionable recommendations for home flippers seeking to purchase houses and flip them for profit. Our analysis shows that square footage of the house is an important factor such that increasing the house size will increase house price. Additionally, we found that house size's relationship to price needs to be analyzed in the context of the building quality as measured by the grading system used by the county. Home flippers can use this project’s findings to inform its business decision with respect to purchasing houses in King County. 
+This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of severity in injury with respect to a myriad of factors such as airbag deployment and road defect. The purpose of the analysis is to provide recommendations for Chicago's Department of Transportation so that they can enact interventions to reduce or prevent injury.Our analysis shows that x. Additionally, we found that x. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestriany. 
 
 ## Data 
 
 ###### Data Source
-This project utilized a dataset from King County detailing houses sold in 2014 and 2015 with features that included price, location, square footage of the house,number of floors,and many other relevant housing related factors. 
-
-###### Data Shape
-The entire raw dataset contains 21,597 rows and 21 columns. Each row represents a house sale while each column specifies a feature such as the number of floors in that house or year built. 
+This project utilized three datasets; one dataset contains information on the crash, a second piece contains information on people involved in the crash and the third dataset contains information on vehicles involved in the crash. Collectively, these three datasets included information on weather condition, road condition, levels of injury, damage cost, among many other related factors. 
 
 ###### Data Preparation
-We cleaned the dataset by dropping missing values, unoperational values such as question marks, and outliers. We also created additional columns that are needed for analysis. This included interaction terms where we deemed that certain variables are better interpreted with another factor. For example, we created an interaction term for building quality(as measured by grade) with square footage of the house. Additionally, we logged certain variables in order to normalize them because they are not normally distributed. At the end of the cleaning process, the data contained approximately 150,000 observations for analysis. 
+We cleaned the dataset by dropping missing values, reformatting certain data types. We also created additional columns that are needed for analysis. This included interaction terms where we deemed that certain variables are better interpreted with another factor. For example, we created an interaction term for building quality(as measured by grade) with square footage of the house. Additionally, we logged certain variables in order to normalize them because they are not normally distributed. At the end of the cleaning process, the data contained approximately 550,000 observations for analysis. 
 
 ## Data Analysis 
 
-This project used multiple regression analysis to generate models that predict home sale price. We split the data into training and testing sets so that we can train our data and test it on completely unseen data in order to understand how well our models are at predicting our response variable. In particular, 20% of the dataset was allocated for training. We iterated our model multiple times by changing the features to assess adjusted R square value and the root-mean-square error (RMSE), two values we used to assess our model's accuracy. With each model we iterated, we aimed to achieve a high adjusted R square while minimizing the RMSE. We stopped the iteration when we saw that our adjusted R square value and RMSE were not changing drastically in the last few tests. 
+This project used different machine learning algorithm to generate different models to predict different levels of injury. We split the data into training and testing sets so that we can train our data and test it on completely unseen data in order to understand how well our models are at predicting our response variable. In particular, 30% of the dataset was allocated for training. We iterated our model multiple times by changing the features to assess accuracy score and precision macro score, two values we used to assess our model's accuracy. 
 
 
 ## Results 
