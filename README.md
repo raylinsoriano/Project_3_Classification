@@ -42,24 +42,24 @@ We determined that the best model for predicting our target variable is XGBoost,
 
 ![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
 
-From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
+#### From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
+
+<br>
+* The percent of accidents for most severe injuries was highest when the road was defected
+<br>
+<img width="567" alt="Screen Shot 2021-09-17 at 11 58 00 AM" src="https://user-images.githubusercontent.com/40476299/133818655-a78bf3ec-99b1-4de1-bd4e-5a626ef1ccb4.png">
 
 
-### The percent of accidents for most severe injuries was highest when the road was defected
 
-![Header Image](x)
+* The accident count for most severe injuries was highest when the airbag was not deployed
 
-
-
-### The accident count for most severe injuries was highest when the airbag was not deployed
+<img width="586" alt="Screen Shot 2021-09-17 at 11 58 09 AM" src="https://user-images.githubusercontent.com/40476299/133818753-57db9d6c-6e81-43a1-93a3-bbc1fd01717b.png">
 
 
-![Header Image](x)
+* The accident likelihood is highest in areas of Northern Chicago 
 
+<img width="604" alt="Screen Shot 2021-09-17 at 11 58 27 AM" src="https://user-images.githubusercontent.com/40476299/133818876-a28d61c6-3703-460d-8cf2-37baece2f41a.png">
 
-### The accident likelihood is highest in areas of Northern Chicago 
-
-![Header Image](x)
 
 
 
