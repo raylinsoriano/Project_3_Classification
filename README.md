@@ -8,7 +8,7 @@ Source: [Burst](https://burst.shopify.com/photos/chicago-city-lights-at-night?q=
 Lorela Blaka, Allison Gao, Raylin Soriano
 
 ## Business Understanding
-The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestrians. This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split level of injury into mild, medium, and severe, making our target variable a ternary class. 
+The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Department of Transportation can use this project’s findings to develop better policies to increase safety for drivers and pedestrians. This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split level of injury into mild, medium, and severe, making our target variable a ternary class. 
 
 You can find these datasets on the city of Chicago website:
 
