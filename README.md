@@ -42,9 +42,12 @@ We determined that the best model for predicting our target variable is XGBoost,
 
 ![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
 
+#### XGBoost Confusion Maxtrix
+
+* XBBoost confusion matrix that our model is good at predictiong level 2 (Most Severe) injuries on validtion data.
+
 #### From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
 
-<br>
 * The percent of accidents for most severe injuries was highest when the road was defected
 <br>
 <img width="567" alt="Screen Shot 2021-09-17 at 11 58 00 AM" src="https://user-images.githubusercontent.com/40476299/133818655-a78bf3ec-99b1-4de1-bd4e-5a626ef1ccb4.png">
@@ -77,9 +80,9 @@ Results from this project’s analysis suggested the following three recommendat
 
 ## Next Steps
 
-1.Increase dataset to include greater number of years 
+1. Increase dataset to include greater number of years 
 
-2.Further modeling and hyperparameter tuning. For example, compare difference between rural and urban Chicago 
+2. Further modeling and hyperparameter tuning. For example, compare difference between rural and urban Chicago 
 
 
 
