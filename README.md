@@ -8,7 +8,7 @@ Source: [Burst](https://burst.shopify.com/photos/chicago-city-lights-at-night?q=
 Lorela Blaka, Allison Gao, Raylin Soriano
 
 ## Business Understanding
-The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Department of Transportation can use this project’s findings to develop better policies to increase safety for drivers and pedestrians. This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split level of injury into mild, medium, and severe, making our target variable a ternary class. 
+The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. The Department of Transportation can use this project’s findings to develop better policies to increase safety for drivers and pedestrians. This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split levels of injury into mild, medium, and severe, making our target variable a ternary class. 
 
 You can find these datasets on the city of Chicago website:
 
@@ -34,7 +34,7 @@ This project used different machine learning algorithms to generate different mo
 
 To generate our target variable, we took a column that reported on different levels of injury and grouped them into mild, medium, and severe. Then conducted a train test split on training so that we can train our data and test it on completely unseen data in order to understand how well our models are at predicting our target variable. The distribution of our target variable is imbalanced- approximately 87% of the data is mild, 11% is medium and 2% is severe. To address class imbalance, we used Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic data from the existing minority cases to purposefully oversample the minority dataset. Additionally, we converted categorical features into binary variables for analysis. 
 <br><br>
-To help select meaningful features for analysis, we used decision tree to help us choose important features for consideration. Then for each machine learning algorithms we used the grid search method provided by Scikit-learn's GridSearchCV to determine candidates from a grid of parameter values specified with the param_grid parameter. Once the "best" parameters are determined, we ran each model again with these parameters. We assessed each model's performance using accuracy score and macro precision score. 
+To help select meaningful features for analysis, we used a decision tree to help us choose important features for consideration. Then for each machine learning algorithm we used the grid search method provided by Scikit-learn's GridSearchCV to determine candidates from a grid of parameter values specified with the param_grid parameter. Once the "best" parameters are determined, we ran each model again with these parameters. We assessed each model's performance using accuracy score and macro precision score. 
 
 ## Results 
 
@@ -50,13 +50,13 @@ We chose precision over recall as a metric because we believe for the purpose of
 
 ![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
 
-#### XGBoost Confusion Maxtrix
+#### XGBoost Confusion Matrix
 
-* XBBoost confusion matrix that our model is good at predictiong level 2 (Most Severe) injuries on training data.
+* XBBoost confusion matrix that our model is good at predicting level 2 (Most Severe) injuries on training data.
 
 <img width="767" alt="Screen Shot 2021-09-17 at 1 35 05 PM" src="https://user-images.githubusercontent.com/40476299/133830390-bae36962-b08f-4f3e-a38f-99f81846dfaa.png">
 
-#### From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
+#### From our graphs below, we highlighted the following three features as important factors in predicting different levels of injury. 
 
 * The percent of accidents for most severe injuries was highest when the road was defected
 <br>
