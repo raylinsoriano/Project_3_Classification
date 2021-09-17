@@ -40,6 +40,8 @@ To help select meaningful features for analysis, we used decision tree to help u
 
 We determined that the best model for predicting our target variable is XGBoost, which has the highest macro precision score: 
 <br>
+
+We examined how well XGBoost perform at predicting each class and saw that on the training dataset, it performed the best at predicting the mild injury class.
 Precision for Mild Injuries: 98.57%<br>
 Precision for Medium Injuries	86.50%<br>
 Precision for Severe Injuries	93.20%<br>
