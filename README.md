@@ -10,14 +10,14 @@ Lorela Blaka, Allison Gao, Raylin Soriano
 
 ## General Overview and Business Understanding
 This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split level of injury into mild, medium, and severe, making our target variable a ternary class. 
-The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Our analysis shows that x. Additionally, we found that x. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestrians. 
+<br><br>The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Our analysis shows that x. Additionally, we found that x. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestrians. 
 
 ## Data 
 
-###### Data Source
-This project utilized three datasets; one dataset contains information on the crash, a second piece contains information on people involved in the crash and the third dataset contains information on vehicles involved in the crash. Collectively, these three datasets included information on weather condition, road condition, levels of injury, damage cost, among many other related factors. Each row from the three tables has an unique crash ID assigned to it at the scene of the crash, allowing us to merge the three datasets. 
+##### Data Source
+This project utilized 3 datasets: <br>-The first dataset contains information on the crash <br>-The second piece contains information on people involved in the crash  <br>-The third dataset contains information on vehicles involved in the crash <br><br>Collectively, these three datasets included information on weather condition, road condition, levels of injury, damage cost, among many other related factors. Each row from the three tables has an unique crash ID assigned to it at the scene of the crash, allowing us to merge the three datasets. 
 
-###### Data Preparation
+##### Data Preparation
 We cleaned the dataset by eliminating columns not needed for analysis, dropping missing values for certain columns, replacing some columns' missing rows with mean or mode, and reformatting certain data types. At the end of the cleaning process, the data contained approximately 550,000 observations for analysis. 
 
 ## Data Analysis 
