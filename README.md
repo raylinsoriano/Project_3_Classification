@@ -38,13 +38,21 @@ To help select meaningful features for analysis, we used decision tree to help u
 
 ## Results 
 
-We determined that the best model for predicting our target variable is XGBoost, which has the highest macro precision score. We chose precision over recall as a metric because we believe for the purpose of this analysis the cost of misidentifying a true positive (recall) is not costly. 
+We determined that the best model for predicting our target variable is XGBoost, which has the highest macro precision score: 
+<br>
+Precision for Mild Injuries: 98.57%<br>
+Precision for Medium Injuries	86.50%<br>
+Precision for Severe Injuries	93.20%<br>
+
+We chose precision over recall as a metric because we believe for the purpose of this analysis the cost of misidentifying a true positive (recall) is not costly. 
 
 ![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
 
 #### XGBoost Confusion Maxtrix
 
 * XBBoost confusion matrix that our model is good at predictiong level 2 (Most Severe) injuries on training data.
+
+<img width="767" alt="Screen Shot 2021-09-17 at 1 35 05 PM" src="https://user-images.githubusercontent.com/40476299/133830390-bae36962-b08f-4f3e-a38f-99f81846dfaa.png">
 
 #### From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
 
@@ -62,6 +70,7 @@ We determined that the best model for predicting our target variable is XGBoost,
 * The accident likelihood is highest in areas of Northern Chicago 
 
 <img width="604" alt="Screen Shot 2021-09-17 at 11 58 27 AM" src="https://user-images.githubusercontent.com/40476299/133818876-a28d61c6-3703-460d-8cf2-37baece2f41a.png">
+
 
 
 
