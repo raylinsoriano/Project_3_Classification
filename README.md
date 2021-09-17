@@ -1,3 +1,4 @@
+
 ![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/chicago-city-lights-at-night.jpg)
 Source: [Burst](https://burst.shopify.com/photos/chicago-city-lights-at-night?q=chicago)
 
@@ -48,7 +49,7 @@ Precision for Severe Injuries	93.20%<br>
 
 We chose precision over recall as a metric because we believe for the purpose of this analysis the cost of misidentifying a true positive (recall) is not costly. 
 
-![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
+<img width="807" alt="Screen Shot 2021-09-17 at 3 09 02 PM" src="https://user-images.githubusercontent.com/40476299/133841336-3e42f8f5-6872-49d1-8d14-2252d7517094.png">
 
 #### XGBoost Confusion Matrix
 
