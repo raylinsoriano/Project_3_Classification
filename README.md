@@ -44,7 +44,7 @@ We determined that the best model for predicting our target variable is XGBoost,
 
 #### XGBoost Confusion Maxtrix
 
-* XBBoost confusion matrix that our model is good at predictiong level 2 (Most Severe) injuries on validtion data.
+* XBBoost confusion matrix that our model is good at predictiong level 2 (Most Severe) injuries on training data.
 
 #### From our graphs below, we higlighted the following three features as important factors in predicting different levels of injury. 
 
