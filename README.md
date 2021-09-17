@@ -9,85 +9,68 @@ Lorela Blaka, Allison Gao, Raylin Soriano
 
 
 ## General Overview and Business Understanding
-This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of severity in injury with respect to a myriad of factors such as airbag deployment and road defect. The purpose of the analysis is to provide recommendations for Chicago's Department of Transportation so that they can enact interventions to reduce or prevent injury.Our analysis shows that x. Additionally, we found that x. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestriany. 
+This analysis used data on car crashes that happened in 2019 in Chicago Illinois to predict different levels of injury with respect to a myriad of factors such as airbag deployment and road defect. Specifically, we split level of injury into mild, medium, and severe, making our target variable a ternary class. 
+The purpose of the analysis is to provide recommendations to Chicago's Department of Transportation(DOT) so that they can enact interventions to reduce or prevent injury. Our analysis shows that x. Additionally, we found that x. Department of Transportation can use this project’s findings to develope better policies to increase safety for drivers and pedestrians. 
 
 ## Data 
 
 ###### Data Source
-This project utilized three datasets; one dataset contains information on the crash, a second piece contains information on people involved in the crash and the third dataset contains information on vehicles involved in the crash. Collectively, these three datasets included information on weather condition, road condition, levels of injury, damage cost, among many other related factors. 
+This project utilized three datasets; one dataset contains information on the crash, a second piece contains information on people involved in the crash and the third dataset contains information on vehicles involved in the crash. Collectively, these three datasets included information on weather condition, road condition, levels of injury, damage cost, among many other related factors. Each row from the three tables has an unique crash ID assigned to it at the scene of the crash, allowing us to merge the three datasets. 
 
 ###### Data Preparation
-We cleaned the dataset by dropping missing values, reformatting certain data types. We also created additional columns that are needed for analysis. This included interaction terms where we deemed that certain variables are better interpreted with another factor. For example, we created an interaction term for building quality(as measured by grade) with square footage of the house. Additionally, we logged certain variables in order to normalize them because they are not normally distributed. At the end of the cleaning process, the data contained approximately 550,000 observations for analysis. 
+We cleaned the dataset by eliminating columns not needed for analysis, dropping missing values for certain columns, replacing some columns' missing rows with mean or mode, and reformatting certain data types. At the end of the cleaning process, the data contained approximately 550,000 observations for analysis. 
 
 ## Data Analysis 
 
-This project used different machine learning algorithm to generate different models to predict different levels of injury. We split the data into training and testing sets so that we can train our data and test it on completely unseen data in order to understand how well our models are at predicting our response variable. In particular, 30% of the dataset was allocated for training. We iterated our model multiple times by changing the features to assess accuracy score and precision macro score, two values we used to assess our model's accuracy. 
+This project used different machine learning algorithms to generate different models in order to predict different levels of injury. In particular, we used multinomial logistic regression, random forest classification, and XGBoost. To generate our target variable, we took a column that reported on different levels of injury and grouped them into mild, medium, and severe. We then split the data into training and testing sets so that we can train our data and test it on completely unseen data in order to understand how well our models are at predicting our target variable. In particular, 30% of the dataset was allocated for training. The distribution of our target variable is imbalanced- approximately 87% of the data is mild, 11% is medium and 2% is severe. To address class imbalance, we used Synthetic Minority Oversampling Technique (SMOTE) to generate synthetic data from the  existing minority cases to purposefully oversample the minority dataset. Additionally, we converted categorical features into binary variables for analysis. 
 
+To help select meaningful features for analysis, we used decision tree to help us choose important features for consideration. Then for each machine learning algorithms we used the grid search method provided by Scikit-learn's GridSearchCV to determine candidates from a grid of parameter values specified with the param_grid parameter. Once the "best" parameters are determined, we ran each model again with these parameters. We assessed each model's performance using accuracy score and macro precision score. 
 
 ## Results 
 
-Our cleaned and filtered dataset had an average home price of $540,168. Furthermore, our best model contained 23 variables using approximately 15,000 observations. It explained about 78% of the variation we see in home sale price, our response variable. Additionally, our model saw an average error of $180,475 on our training data and an average error of $185,615 on our unseen data. 
+We determined that the best model for predicting our target variable is Random Forest, which has the highest macro precision score. We chose precision over recall as a metric because we believe for the purpose of this analysis the cost of misidentifying a true positive (recall) is not costly. 
 
-The following three operable factors are statistically significant. We defined operable to mean features home flippers can operate on or fix. 
+![Header Image](https://github.com/raylinsoriano/Project_3_Classification/blob/main/Images/Screen%20Shot%202021-09-16%20at%209.32.22%20PM.png)
 
-1. Square footage of the entire house
-2. Building quality as measured by building grade ( 1 to 13)
-3. Number of bathrooms
-
-The following three non-operable factors are statistically significant. We defined non-operable to mean features home flippers cannot operate on or fix. However, home flippers can still exert decision over these factors. 
-
-1. If a house is facing the waterfront 
-2. Age of the house
-3. House living space for the nearest 15 neighbors
+From our model, we higlighted the following three features as important factors in predicting different levels of injury. 
 
 
-### Change in feature and its relationship to change in home price 
+### The percent of accidents for most severe injuries was highest when the road was defected
 
 ![Header Image](x)
-We highlighted what happens when we increase a feature by one unit or one percentage point. For example, we see that among the three factors, one additional increase in bathroom generated the greatest change in home sale price compared to the other two factors. 
 
 
-### Change in house square footage and its relationship to change in home price 
+
+### The accident count for most severe injuries was highest when the airbag was not deployed
+
 
 ![Header Image](x)
-Sale price increases by ~0.75% for every 1% increase in the house's square footage
 
 
-### Change in house square footage and its relationship to change in home price for different quality houses
-
-![Header Image](x)
-For a house with an average grade and at an average price ($540,168) if you increase the square footage of the entire living space by 1%, it will increase the sale price by  ~$5,700. 
-
-
-### Change in number of bathroom and its relationship to change in home price
+### The accident likelihood is highest in areas of Northern Chicago 
 
 ![Header Image](x)
-For a house at the average price, one additional bathroom will increase the home sale price by  ~$25,000. 
+
 
 
 
 ## Conclusion and Recommendations 
 
-Results from this project’s analysis suggested the following three recommendations for home flippers to consider:
+Results from this project’s analysis suggested the following three recommendations for DOT to consider:
 
-1. Start with location. We found that home sale prices do differ whether or not a house is facing a waterfront. Additionally, such a difference is also statistically significant between houses in the northern and southern part of the county. Even at the neighborhood level, the square footage of interior housing living space for the nearest 15 neighbors has an impact on house price. These three factors are helpful to consider as home flippers start the decision process. 
+1. Fix road infrastructure to reduce severe level of injury 
 
-2. After a location is selected, we recommend that home flippers consider these three features that are operable as an effort to increase home price. 
+2. Investigate airbag safety issues 
 
-    A. We found that increasing the house size is associated with an increase in house price. For example, a house that is at $540,168, if you increase the square footage of the entire living space by 1%, it will increase home sale price by  ~$5,700. 
-    
-    B. Additionally, we recognized that many variables are interconnected and that many features need to be analyzed in the context with other factors. In particular, we believe that house size's relationship with home price also depends on the house's quality as measured by the county's grading system. That a higher grade is associated with higher home price. Therefore, we recommend that home flippers take into consideration building quality. Details of the grading scale can be found here on [this website](https://info.kingcounty.gov/assessor/esales/Glossary.aspx?type=r). 
-    
-    C. Lastly, we recognize the various possibilities involved in flipping a house for profit and recommend adding bathrooms to increase sale price. For a house with an average price, one additional bathroom will increase the home sale price by  ~$25,000. 
+3. Implement safety measures in high accident zones (i.e. address congestion issue, implement more safety signs) 
 
 
 ## Next Steps
 
-1. Calculate ratios of relevant interaction terms to put numbers into greater perspective. For example, bedroom to bathroom ratio or house size to lot size ratio. 
+1.Increase dataset to include greater number of years 
 
-2. Find real estate data that includes other relevant information impacting house price. For example, kitchens and the presence of a pool. 
+2.Further modeling and hyperparameter tuning. For example, compare difference between rural and urban Chicago 
 
-3. Obtain renovation cost in King County by house size for budget analysis 
 
 
 ## Additional Information
@@ -111,8 +94,8 @@ Raylin Soriano: sorianoraylin@gmail.com
 ├── images    <-- visualizations generated from working notebooks and external images
 ├── Individuals Notebooks       <--- Directory for individual workspaces
 │   ├── allison
-│   ├── eric
-│   
+│   ├── raylin
+│   ├── lorela
 │   
 ├── Final Notebook.ipynb    <-- Jupyter Notebook containing codes detailing project's analysis 
 ├── Non-technical Presentation.pdf   <-- non-technical presentation slides
